@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+
+    <!-- Link to the external CSS file inside the assets/css folder -->
+    <link rel="stylesheet" href="assets/css/model.css">
+</head>
+<body>
+    <!-- Header section with logo, navigation, and call to action button -->
+    <header>
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="assets/images/uoc-logo.png" alt="University of Curacao Logo" id="uoc-logo">
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Vehicle Details</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Live Data</a></li>
+                <li><a href="#">Account Access</a></li>
+            </ul>
+        </nav>
+
+        <!-- Call-to-action button for 3D model -->
+        <div class="cta-button">
+            <a href="index.html">Exit →</a>
+        </div>
+    </header>
+
+    <!-- 3D model viewer container -->
+    <div id="container"></div>
+
+    <!-- Importing three.js library (JS libraries before custom scripts) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+
+    <!-- Importing GLTFLoader to load .glb models -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+
+    <!-- Importing OrbitControls for interactive controls (zoom, pan, rotate) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Custom JavaScript file inside the assets/js folder -->
+    <script src="assets/js/model.js"></script>
+</body>
+</html>

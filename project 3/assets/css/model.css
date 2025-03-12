@@ -1,0 +1,114 @@
+/* Reset body and html margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;  /* Set a base font */
+}
+
+/* Ensure the 3D model container takes up the full screen */
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Header styles - Make the header invisible */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;   /* Make header background transparent */
+    box-shadow: none;                /* Remove shadow */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;                     /* Ensure the header stays on top */
+    box-sizing: border-box;          /* Prevent box from overflowing */
+}
+
+/* Logo styles */
+header .logo img {
+    height: 50px;  /* Set the height of the logo */
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;         /* Display nav items in a row */
+    list-style: none;      /* Remove bullet points */
+}
+
+nav ul li {
+    margin-right: 20px;    /* Space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333;           /* Set color for the links */
+    font-size: 16px;       /* Set font size */
+}
+
+nav ul li a:hover {
+    color: #007BFF;        /* Highlight the text on hover */
+}
+
+/* Call to action button styles */
+.cta-button a {
+    background-color: #28a745;   /* Green background for the button */
+    color: white;                /* White text color */
+    padding: 10px 20px;           /* Padding inside the button */
+    border-radius: 30px;         /* Rounded corners */
+    text-decoration: none;       /* Remove underline */
+    font-weight: bold;           /* Make the text bold */
+}
+
+.cta-button a:hover {
+    background-color: #218838;   /* Darker green when hovered */
+}
+
+/* Fixing Exit Button positioning */
+.exit-button {
+    background-color: #d9534f;  /* Red background for exit button */
+    color: white;                /* White text */
+    padding: 10px 20px;          /* Padding for button size */
+    border-radius: 30px;         /* Rounded corners */
+    text-decoration: none;       /* Remove underline */
+    font-weight: bold;           /* Bold text */
+    position: absolute;          /* Absolute positioning */
+    top: 20px;                   /* Position the button 20px from the top */
+    right: 20px;                 /* Position the button 20px from the right */
+    z-index: 1000;               /* Ensure the button is above other elements */
+}
+
+.exit-button:hover {
+    background-color: #c9302c;   /* Darker red on hover */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;           /* Reduce padding on smaller screens */
+        flex-direction: column;  /* Stack header items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 10px;        /* Add margin between items */
+    }
+
+    nav ul li {
+        margin: 5px 0;           /* Add space between menu items */
+    }
+
+    .cta-button a {
+        margin-top: 10px;        /* Space above the button */
+    }
+
+    /* Ensure the Exit button is positioned correctly on smaller screens */
+    .exit-button {
+        top: 10px;   /* Adjust top positioning */
+        right: 10px; /* Adjust right positioning */
+    }
+}

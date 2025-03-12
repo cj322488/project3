@@ -1,0 +1,171 @@
+/* assets/css/cardetails.css */
+
+/* --- General Car Details Page Styles --- */
+.car-details {
+    font-family: sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #fefefe; /* Very light background */
+}
+
+.car-details h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50; /* Darker heading color */
+    text-align: center;
+}
+
+.car-details .price {
+    font-size: 1.5em;
+    color: #007bff; /* Example price color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.car-details p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* --- Content Wrapper (Image and Basic Specs) --- */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items to the start vertically */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background for section */
+    border-radius: 8px;
+    gap: 30px; /* Spacing between image and specs */
+}
+
+.car-image {
+    flex: 1.2; /* Take up more space for image */
+    max-width: 60%; /* Limit max image width */
+}
+
+.car-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.specifications {
+    flex: 1; /* Take up remaining space for specs */
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.spec-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    opacity: 0.8; /* Slightly faded icons */
+}
+
+.spec-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Dark gray spec title */
+}
+
+.spec-info p {
+    font-size: 1em;
+    color: #777; /* Lighter gray spec value */
+}
+
+/* --- Additional Info Section Wrapper --- */
+.additional-info {
+    padding: 20px;
+}
+
+.additional-info section {
+    margin-bottom: 30px; /* Spacing between sections */
+}
+
+.additional-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* --- Styling for Detail Sections (Engine Specs, Safety Features) --- */
+.detail-section {
+    margin-bottom: 30px; /* Spacing between detail sections */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background for sections */
+    border-radius: 8px;
+}
+
+.detail-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Center the section heading */
+}
+
+.detail-section-content {
+    display: flex; /* Flexbox for image and info side-by-side */
+    align-items: flex-start; /* Align items to the start vertically */
+    gap: 30px; /* Spacing between image and info */
+}
+
+.detail-image {
+    flex: 1; /* Image container takes up available space */
+    max-width: 50%; /* Limit image width to half of the container */
+}
+
+.detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle image shadow */
+}
+
+.detail-info {
+    flex: 1.5; /* Info container takes up more space than image */
+}
+
+/* Adjustments for specs-grid within detail-info - reusing existing styles */
+.detail-info .specs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Reduced gap within spec grid */
+}
+
+.detail-info .spec-item {
+    /* Inheriting styles from existing .spec-item, can adjust if needed */
+}
+
+.detail-info .spec-info {
+    /* Inheriting styles from existing .spec-info, can adjust if needed */
+}
+
+/* --- Responsive Adjustments (Example - you can expand on these) --- */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack image and specs on smaller screens */
+        text-align: center; /* Center text when stacked */
+    }
+
+    .car-image {
+        max-width: 90%; /* Wider image on smaller screens */
+        margin: 0 auto 20px; /* Center image and add bottom margin */
+    }
+
+    .detail-section-content {
+        flex-direction: column; /* Stack image and info in detail sections too */
+        text-align: center;
+    }
+
+    .detail-image {
+        max-width: 80%; /* Wider detail images on smaller screens */
+        margin: 0 auto 20px;
+    }
+}
